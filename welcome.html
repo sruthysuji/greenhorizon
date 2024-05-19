@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Gardening</title>
+    
+   
+    <style>
+  
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(199, 223, 216);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #3e4a3a;
+        }
+        .navbar {
+            width: 100%;
+            background-color: rgb(9, 49, 37);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #4e681a;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .welcome-container {
+            
+            background:linear-gradient( to bottom,#075e13fd,#52b35ff1) ;
+            padding: 80px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1500px;
+            text-align: center;
+        }
+        .welcome-container h1 {
+            color: #f6f8f3;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 2.9em;
+        } .welcome-container h2 {
+            color: #f6f8f3;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 2.0em;
+        }
+        .welcome-container p {
+            font-size: 1.0em;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: #d0d0ce;
+        }
+        .form-container {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+        .form-container h2{
+            padding: 1px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            background-color: #ffffff;
+            margin-top: 10px;
+            max-width: 1500px;
+        }
+        .options {
+            margin: 5px 0;
+        }
+        .options label {
+            display: block;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #6b8e23;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #556b2f;
+        }
+        .images-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-container {
+            width: 200px;
+            height: 200px;
+            background-color: #dcdcdc;
+            border-radius: 10px;
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+       
+        .extra-info {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .extra-info h2 {
+            color: #070b01;
+        }
+        .extra-info p {
+            font-size: 1em;
+            color: #0c0e01;
+        }
+        .last{
+            text-align: center;
+            color:#dcdcdc;
+            width:100%;
+            background-color:#042809f1;
+            padding: 20px; /* Add padding to the last section */
+        }
+        .footer {
+            background-color:rgb(9, 49, 37);
+            text-align: center;
+            padding: 5px 0;
+            margin-top: 20px;
+            width: 105%;
+            color:#dcdcdc;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons img {
+           
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        .contacts{
+            text-align: center;
+            color:#dcdcdc;
+            width:100%;
+            background:linear-gradient( to top,#075e13fd,#52b35ff1) ;
+            padding: 20px; /* Add padding to the contacts section */
+        }
+        
+       
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#" onclick="scrollToLastSection()">About</a>
+    <a href="#">Profile</a>
+</div>
+
+<div class="main-container">
+    <div class="welcome-container">
+        <h1><b>Welcome to the realm of nature’s miracles. Let your gardening journey begin!</b></h1>
+        <p><b>Welcome to the world of gardening and agriculture, where every seed you plant is a step towards a greener, more vibrant tomorrow. Here, you will discover the joy of nurturing life, the peace found in nature’s embrace, and the satisfaction of watching your efforts bloom into beauty and bounty. Whether you’re cultivating a small garden or transforming a terrace into a lush oasis, your journey begins here. Embrace the art of growth, the magic of soil, and the promise of a flourishing future. Let’s sow the seeds of hope and harvest the joys of nature together.</b></p>
+        <p><b><h2>Welcome aboard!</h2></b></p>
+    </div>
+
+    <div class="form-container">
+        <div class="options">
+            <label>
+                <h2>Choose your space below!</h2>
+                <input type="radio" name="agriculture" value="garden"> <b>GARDEN</b>
+                <input type="radio" name="agriculture" value="terrace"> <b>TERRACE/BALCONY</b>
+            </label>
+           
+               
+         
+        </div>
+        <button onclick="proceed()">Proceed</button>
+    </div>
+
+    <div class="images-section">
+        <div class="image-container" style="background-image: url('sowing.jpg');"></div>
+        <div class="image-container" style="background-image: url('water.jpeg');"></div>
+       
+        <div class="image-container" style="background-image: url('veg1.jpg');"></div>
+        <div class="image-container" style="background-image: url('carrot.jpg');"></div>
+        <div class="image-container" style="background-image: url('chily.jpg');"></div>
+    </div>
+
+    <div class="extra-info">
+        <h2>Get Started with Your Garden</h2>
+        <p>Starting a gardening journey to grow daily required vegetables is a rewarding endeavor.<br> Here are some practical tips for beginners:<br>
+
+           <h2><br><b> 1.Choose the Right Location</b><br></h2>
+               - <b>Sunlight</b>: Ensure your garden area gets at least 6-8 hours of sunlight per day.<br>
+               - <b>Soil</b>: Choose a spot with well-draining soil to prevent waterlogging.<br>
+               - <b>Accessibility</b>: Make sure it's convenient to water and maintain.<br><br>
+            
+             <h2><b> 2.Start Small</b><br></h2>
+               - <b>Begin with a few easy-to-grow vegetables</b>: Tomatoes, lettuce, radishes, carrots, and herbs.<br>
+               - <b>Container Gardening</b>: If space is limited, use pots or containers.<br><br>
+            
+             <h2><b> 3.Prepare the Soil</b><br></h2>
+               - <b>Test Your Soil</b>: Check for pH and nutrient levels (you can get a soil testing kit or send a sample to a local extension service).<br>
+               - <b>Add Organic Matter</b>: Enrich the soil with compost or aged manure to improve fertility.<br><br>
+            
+             <h2><b> 4.Plan Your Garden Layout</b><br></h2>
+               - <b>Spacing</b>: Leave enough space between plants for growth and air circulation.<br>
+               - <b>Companion Planting</b>: Some plants grow better together (e.g., tomatoes and basil).<br><br>
+            
+           <h2><b> 5.Select Seeds or Seedlings</b><br></h2>
+               - <b>Quality Seeds</b>: Buy from reputable sources.<br>
+               - <b>Seedlings</b>: Starting with seedlings can be easier for beginners.<br><br>
+            
+             <h2><b> 6.Watering</b><br></h2>
+               - <b>Consistent Watering</b>: Keep the soil consistently moist, but not waterlogged.<br>
+               - <b>Morning Watering</b>: Water early in the morning to reduce evaporation and prevent diseases.<br><br>
+            
+             <h2><b> 7.Fertilize Appropriately</b><br></h2>
+               - <b>Balanced Fertilizer</b>: Use a balanced, all-purpose vegetable fertilizer.<br>
+               - <b>Follow Instructions</b>: Apply fertilizers as per the package instructions.<br><br>
+            
+              <h2><b> 8.Mulch</b><br></h2>
+               - <b>Retain Moisture</b>: Use organic mulch like straw, grass clippings, or leaves to retain moisture and suppress weeds.<br>
+               - <b>Temperature Regulation</b>: Mulch helps maintain soil temperature.<br><br>
+            
+             <h2><b> 9.Pest and Disease Management</b><br></h2>
+               - <b>Natural Methods</b>: Use insecticidal soap, neem oil, or introduce beneficial insects like ladybugs.<br>
+               - <b>Regular Inspection</b>: Check plants regularly for signs of pests or disease.<br><br>
+            
+             <h2> <b> 10.Harvesting</b><br></h2>
+               - <b>Pick Regularly</b>: Harvest vegetables as soon as they’re ripe to encourage continuous production.<br>
+               - <b>Proper Techniques</b>: Use the correct techniques to avoid damaging plants (e.g., twist and pull for tomatoes).<br><br>
+            <br><br>
+            <h2><b>Common Natural fertilisers and manures</b></h2><br>
+   <b> Compost:</b> Decomposed organic matter such as kitchen scraps, yard waste, and manure.<br>
+
+<b>Animal Manure:</b> Animal waste like cow, horse, chicken, and sheep manure, which is rich in nutrients.<br>
+
+<b>Green Manure:</b> Crops like clover, alfalfa, or vetch that are grown and then plowed back into the soil to improve fertility.<br>
+
+<b>Bone Meal:</b> Ground-up animal bones, a good source of phosphorus and calcium.<br>
+
+<b>Fish Emulsion:</b> A liquid fertilizer made from fish waste, providing nitrogen, phosphorus, and trace minerals.<br>
+
+<b>Blood Meal:</b> A high-nitrogen fertilizer made from dried animal blood.<br>
+
+<b>Seaweed:</b> Rich in trace minerals and growth hormones, often used as a foliar spray or soil conditioner.<br>
+
+<b>Bat Guano:</b> Fertilizer derived from bat droppings, high in nitrogen, phosphorus, and potassium.<br>
+
+<b>Worm Castings (Vermicompost):</b> Rich in nutrients and beneficial microbes, produced by composting with earthworms.<br>
+
+<b>Feather Meal:</b> Made from hydrolyzed poultry feathers, a slow-release source of nitrogen.<br>
+
+<b>Cottonseed Meal:</b> Byproduct of cotton processing, contains nitrogen, phosphorus, and potassium.<br>
+
+<b>Rock Phosphate:</b> A natural mineral fertilizer containing phosphorus and other trace minerals.<br>
+
+<b>Greensand:</b> Derived from marine sediment, contains potassium, iron, magnesium, and other minerals.<br>
+
+<b>Wood Ash:</b> Contains potassium and calcium carbonate, can help raise soil pH.<br>
+
+<b>Manure Tea:</b> A liquid fertilizer made by steeping manure in water, providing nutrients in a diluted form.<br>
+             <h2>Keep Learning !!<br></h2>
+            <h2>Starting your gardening journey with these tips can help ensure a successful and enjoyable experience. Happy gardening!</h2></p>
+    </div>
+</div><br>
+        <div class="contacts" id ="last-section">
+            <h2><b>Contact Information</b></h2>
+            <p><b>
+                <h3>Phone: 123-456-7890</h3>
+                <h3>Email: info@gardening.com</h3>
+                <h3>Address: Sri Eshwar College Of Engineering ,Kinathukadavu<br>Coimbatore - 641 202</h3>
+            </b></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage"><img src="C:\Users\Sruthy suji\Documents\expo2024\fb-removebg-preview.png" width="50px" alt="Facebook"></a>
+                <a href="https://www.twitter.com/yourprofile"><img src="C:\Users\Sruthy suji\Documents\expo2024\tw-removebg-preview.png"width="53px" alt="Twitter"></a>
+                <a href="https://www.instagram.com/yourprofile"><img src="C:\Users\Sruthy suji\Documents\expo2024\insta-removebg-preview.png"width="30px" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; Green Horizon</p>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    function proceed() {
+        const options = document.getElementsByName('agriculture');
+        let selectedOption = null;
+        for (const option of options) {
+            if (option.checked) {
+                selectedOption = option.value;
+                break;
+            }
+        }
+        if (selectedOption) {
+            const url = selectedOption === 'garden' ? 'file:///C:/Users/Sruthy%20suji/Documents/expo2024/page%202%20for%20gaden.html' : 'file:///C:/Users/Sruthy%20suji/Documents/expo2024/page%204%20terrace.html';
+            window.open(url, '_blank');
+        } else {
+            alert('Please select an option before proceeding.');
+        }
+    }
+    
+    function scrollToLastSection() {
+        const lastSection = document.getElementById('last-section');
+        lastSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+
+</script>
+
+</body>
+</html>
